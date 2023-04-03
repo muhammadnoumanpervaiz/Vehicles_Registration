@@ -1,0 +1,19 @@
+const vehicleColumns = [
+    { title: "Vehicle Name", field: "vehicle_name" },
+    { title: "Registration No", field: "registration_number" },
+    { title: "Category", field: "category" },
+    {
+        title: "Model",
+        field: "model",
+        type: "numeric",
+    },{ title: "Color", field: "color" },
+    { title: "Type", field: "type" },
+    { title: "Price", field: "price", type: "numeric" },
+];
+
+const categoryColumn = [
+    {title:"Category", field:"category"}, 
+    {title: "Manufacturer", field:"manufacturer"}
+]
+
+export default {vehicleColumns, categoryColumn, colors};
