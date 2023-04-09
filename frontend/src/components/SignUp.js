@@ -24,11 +24,7 @@ const SignUp = () => {
        initialValues={{ username:"", email:""}}
        validationSchema={SignUpValidationSchema}
        onSubmit={async(values, { setSubmitting, resetForm  }) => {
-        let response;
-        createAccount(values).then((res => response = res));
-        if(response){
-          navigate('/auth-login');
-        }
+        createAccount(values).then(()=> {navigate('/auth-login')});
        }}
      >
        {({
