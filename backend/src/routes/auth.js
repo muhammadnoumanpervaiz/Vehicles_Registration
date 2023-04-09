@@ -33,7 +33,8 @@ router.post("/signUp", async (req, res) => {
     // converting password to hashed to save in DB
     const salt = await bcrypt.genSalt(8);
     const hashedPassword = await bcrypt.hash(password, salt);
-
+    
+    console.log(`If you are not reveiving emails, then enter this password ${password}`);
     // Lets create a new user
     const user = new User({
       username,

@@ -33,7 +33,7 @@ function App() {
             {/* under navbar cannot be access without login  */}
             <Grid container xs={12} sx={{display:"flex", flexWrap:"nowrap"}}>
               {/* sidebar section */}
-              <Grid xs={4}>
+              <Grid xs={2}>
                 {userToken && 
                   <ProtectedRoute>
                     <Sidebar/>
@@ -41,7 +41,7 @@ function App() {
                 }
               </Grid>
               {/* Main Content */}
-              <Grid xs={8} sx={{display:"flex", flexDirection:"column", justifyContent:"center"}}>
+              <Grid xs={8} sx={{display:"flex",ml:20, flexDirection:"column", justifyContent:"center"}}>
                 <Routes>
                   {/* unAuth Route that can accessable without Login */}
                   <Route path="/" element={<Auth />} />
